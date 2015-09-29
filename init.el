@@ -89,5 +89,8 @@
 ;; Markdown
 (require 'init-markdown)
 
+;; IRC
+(require 'init-irc)
+
 (provide 'init)
 ;;; init.el ends here
