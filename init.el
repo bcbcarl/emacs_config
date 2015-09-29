@@ -75,6 +75,9 @@
 ;; Web
 (require 'init-web)
 
+;; Markdown
+(require 'init-markdown)
+
 ;; Backup settings
 (setq
   backup-by-copying t

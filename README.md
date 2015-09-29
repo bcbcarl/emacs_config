@@ -9,6 +9,7 @@
 * flycheck
 * js2-mode
 * js2-refactor
+* markdown-mode
 * material-theme
 * php-auto-yasnippets
 * php-mode
