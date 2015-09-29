@@ -2,6 +2,7 @@
 
 ## Requirements
 
+* emmet-mode
 * evil
 * flycheck
 * material-theme

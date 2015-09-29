@@ -65,6 +65,11 @@
 ;; PHP
 (require 'init-php)
 
+;; Emmet
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
+
 ;; Backup settings
 (setq
   backup-by-copying t
