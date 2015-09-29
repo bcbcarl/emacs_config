@@ -34,13 +34,13 @@
 ;; ELPA
 (require 'init-elpa)
 
+;; Remove menubar, toolbar and scrollbar
+(when (fboundp 'menu-bar-mode)
+     (menu-bar-mode -1))
+
 ;; Mac only
 (require 'init-osx)
 
-;; Remove menubar (execpt OSX), toolbar and scrollbar
-(and (fboundp 'menu-bar-mode)
-     (not *is-a-mac*)
-     (menu-bar-mode -1))
 (dolist (mode '(tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
