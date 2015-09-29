@@ -4,6 +4,13 @@
 
 ;;; Code:
 
+(setenv "PATH"
+  (concat
+    "/usr/local/bin:"
+    (getenv "PATH")
+  )
+)
+
 ;; Flycheck
 (defvar flycheck-emacs-lisp-load-path 'inherit)
 
