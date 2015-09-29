@@ -94,6 +94,8 @@
 
 (add-hook 'web-mode-hook 'emmet-mode)
 (add-hook 'web-mode-hook 'ac-emmet-html-setup)
+
+(add-hook 'css-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook 'ac-emmet-css-setup)
 
 (setq web-mode-ac-sources-alist
