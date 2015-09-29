@@ -85,6 +85,7 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 (defun my-web-mode-hook ()
   "Hooks for Web mode."
@@ -97,6 +98,9 @@
 
 (add-hook 'css-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook 'ac-emmet-css-setup)
+
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-m")
 
 (setq web-mode-ac-sources-alist
   '(("php" . (ac-source-yasnippet ac-source-php-auto-yasnippets))
