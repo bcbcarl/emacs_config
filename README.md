@@ -7,6 +7,8 @@
 * emmet-mode
 * evil
 * flycheck
+* js2-mode
+* js2-refactor
 * material-theme
 * php-auto-yasnippets
 * php-mode
