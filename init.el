@@ -4,6 +4,7 @@
 
 ;;; Code:
 
+;; Set PATH
 (setenv "PATH"
   (concat
     "/usr/local/bin:"
@@ -11,17 +12,27 @@
   )
 )
 
+;; Backup settings
+(setq
+  backup-by-copying t
+  backup-directory-alist
+    '(("." . "~/.saves"))
+  delete-old-versions t
+  kept-new-versions 6
+  kept-old-versions 2
+  version-control t)
+
 ;; Flycheck
 (defvar flycheck-emacs-lisp-load-path 'inherit)
 
 ;; Load init files
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-;; ELPA
-(require 'init-elpa)
-
 ;; No startup screen
 (setq inhibit-startup-screen t)
+
+;; ELPA
+(require 'init-elpa)
 
 ;; Mac only
 (require 'init-osx)
@@ -77,16 +88,6 @@
 
 ;; Markdown
 (require 'init-markdown)
-
-;; Backup settings
-(setq
-  backup-by-copying t
-  backup-directory-alist
-    '(("." . "~/.saves"))
-  delete-old-versions t
-  kept-new-versions 6
-  kept-old-versions 2
-  version-control t)
 
 (provide 'init)
 ;;; init.el ends here
