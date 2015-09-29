@@ -2,11 +2,16 @@
 
 ## Requirements
 
+* ac-emmet
+* auto-complete
 * emmet-mode
 * evil
 * flycheck
 * material-theme
+* php-auto-yasnippets
 * php-mode
+* web-mode
+* yasnippet
 
 ## Installation
 

@@ -1,3 +1,4 @@
 .saved-places
-games/**
-elpa/**
+games/
+elpa/
+ac-comphist.dat
