@@ -37,13 +37,13 @@
 ;; Remove menubar, toolbar and scrollbar
 (when (fboundp 'menu-bar-mode)
      (menu-bar-mode -1))
+(dolist (mode '(tool-bar-mode scroll-bar-mode))
+  (when (fboundp mode) (funcall mode -1)))
 
 ;; Mac only
 (require 'init-osx)
 
-(dolist (mode '(tool-bar-mode scroll-bar-mode))
-  (when (fboundp mode) (funcall mode -1)))
-
+;; material-theme
 (load-theme 'material t)
 
 ;; Auto-fill Mode
