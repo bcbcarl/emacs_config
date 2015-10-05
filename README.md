@@ -3,8 +3,6 @@
 ## Requirements
 
 * ac-emmet
-* auto-complete
-* emmet-mode
 * evil
 * flycheck
 * js2-mode
