@@ -3,10 +3,13 @@
 ## Requirements
 
 * ac-emmet
+* editorconfig
 * evil
 * flycheck
+* git-gutter
 * js2-mode
 * js2-refactor
+* lua-mode
 * markdown-mode
 * material-theme
 * php-auto-yasnippets
