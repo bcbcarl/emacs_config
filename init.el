@@ -95,6 +95,10 @@
 ;; Auto-Complete
 (ac-config-default)
 
+;; shell-pop
+(custom-set-variables
+ '(shell-pop-universal-key "C-x t"))
+
 ;; Git-Gutter
 (require 'init-git)
 
