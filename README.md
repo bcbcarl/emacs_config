@@ -12,6 +12,7 @@
 * lua-mode
 * markdown-mode
 * material-theme
+* neotree
 * php-auto-yasnippets
 * php-mode
 * web-mode

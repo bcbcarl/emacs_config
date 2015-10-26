@@ -69,6 +69,15 @@
             (evil-mode 1)
 	    (flycheck-mode 1))))
 
+;; neotree
+(global-set-key [f8] 'neotree-toggle)
+(add-hook 'neotree-mode-hook
+	(lambda ()
+	    (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+	    (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+	    (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+	    (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+
 ;; show parenthesis match
 (defvar show-paren-delay 0)
 (defvar show-paren-style 'expression)
