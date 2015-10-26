@@ -86,6 +86,9 @@
 ;; Git-Gutter
 (require 'init-git)
 
+;; Lua
+(require 'init-lua)
+
 ;; Web
 (require 'init-web)
 
