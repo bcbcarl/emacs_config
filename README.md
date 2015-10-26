@@ -15,6 +15,7 @@
 * neotree
 * php-auto-yasnippets
 * php-mode
+* shell-pop
 * web-mode
 * yasnippet
 
