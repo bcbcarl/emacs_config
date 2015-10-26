@@ -83,6 +83,9 @@
 ;; Auto-Complete
 (ac-config-default)
 
+;; Git-Gutter
+(require 'init-git)
+
 ;; Web
 (require 'init-web)
 
