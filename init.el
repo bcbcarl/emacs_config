@@ -67,7 +67,7 @@
           (lambda ()
             (linum-mode 1)
             (evil-mode 1)
-	    (flycheck-mode 1))))
+            (flycheck-mode 1))))
 
 ;; neotree
 (global-set-key [f8] 'neotree-toggle)
