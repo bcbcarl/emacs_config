@@ -98,7 +98,7 @@
 ;; shell-pop
 (custom-set-variables
   '(shell-pop-shell-type (quote ("ansi-term" "*ansi-term*" (lambda nil (ansi-term shell-pop-term-shell)))))
-  '(shell-pop-universal-key "C-x t"))
+  '(shell-pop-universal-key "C-x C-t"))
 
 ;; Git-Gutter
 (require 'init-git)
