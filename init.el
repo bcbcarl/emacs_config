@@ -99,6 +99,7 @@
 (custom-set-variables
   '(shell-pop-shell-type (quote ("ansi-term" "*ansi-term*" (lambda nil (ansi-term shell-pop-term-shell)))))
   '(shell-pop-universal-key "C-x C-t"))
+(add-hook 'term-mode-hook (lambda() (setq yas-dont-activate t)))
 
 ;; Git-Gutter
 (require 'init-git)
