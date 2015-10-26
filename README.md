@@ -1,5 +1,7 @@
 # emacs_config
 
+This config is for OS X only.
+
 ## Requirements
 
 * ac-emmet
