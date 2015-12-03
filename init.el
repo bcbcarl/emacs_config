@@ -86,11 +86,17 @@
 ;; Toggle line highlighting in all buffers
 (global-hl-line-mode t)
 
-;; frame font
-;; Setting English Font
+;; Setting English font
 (if (member "Monaco" (font-family-list))
     (set-face-attribute
-      'default nil :font "Monaco 12"))
+      'default nil :font "Monaco 14"))
+
+;; Setting CJK font
+(if (member "PingFang TC" (font-family-list))
+    (dolist (charset '(kana han symbol cjk-misc bopomofo))
+      (set-fontset-font (frame-parameter nil 'font)
+			charset
+			(font-spec :family "PingFang TC" :size 14))))
 
 ;; Auto-Complete
 (ac-config-default)

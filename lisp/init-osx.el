@@ -7,10 +7,6 @@
                                     ((control))))
   ;; Display menubar when using Emacs.app
   (if (display-graphic-p)
-    (menu-bar-mode 1))
-
-  ;; Set default Chinese font
-  (set-fontset-font "fontset-default" 'han '("PingFang TC"))
-)
+    (menu-bar-mode 1)))
 
 (provide 'init-osx)
