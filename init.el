@@ -22,6 +22,9 @@
   kept-old-versions 2
   version-control t)
 
+;; Remove newline insertion at end of file
+(setq mode-require-final-newline nil)
+
 ;; Flycheck
 (defvar flycheck-emacs-lisp-load-path 'inherit)
 
