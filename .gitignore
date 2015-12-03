@@ -1,6 +1,9 @@
+/auto-save-list/
+/elpa/
+/games/
+/url/
 .saved-places
-auto-save-list/
-games/
-elpa/
 ac-comphist.dat
 *.swp
+\#*\#
+.\#*
