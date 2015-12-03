@@ -1,4 +1,5 @@
 (defconst *is-a-mac* (eq system-type 'darwin))
+
 (when *is-a-mac*
   ;; Make mouse wheel / trackpad scrolling less jerky
   (setq mouse-wheel-scroll-amount '(1
@@ -6,6 +7,10 @@
                                     ((control))))
   ;; Display menubar when using Emacs.app
   (if (display-graphic-p)
-      (menu-bar-mode 1)))
+    (menu-bar-mode 1))
+
+  ;; Set default Chinese font
+  (set-fontset-font "fontset-default" 'han '("PingFang TC"))
+)
 
 (provide 'init-osx)
