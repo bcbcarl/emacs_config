@@ -40,9 +40,6 @@
 (dolist (mode '(tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
-;; editorconfig
-(setq edconf-exec-path "/usr/local/bin/editorconfig")
-
 ;; Mac only
 (require 'init-osx)
 
