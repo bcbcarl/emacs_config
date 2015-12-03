@@ -15,21 +15,31 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js2-jsx-mode))
 
 (defun my-web-mode-hook ()
   "Hooks for Web mode."
+  (setq-default indent-tabs-mode nil)
   (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-indent-style 2)
 )
-(add-hook 'web-mode-hook 'my-web-mode-hook)
 
+(defun my-js2-mode-hook ()
+  "Hooks for JS2 mode."
+  (setq-default indent-tabs-mode nil)
+  (setq-default js2-basic-offset 2)
+  (setq-default js2-indent-line 2)
+)
+
+(add-hook 'web-mode-hook 'my-web-mode-hook)
 (add-hook 'web-mode-hook 'emmet-mode)
 (add-hook 'web-mode-hook 'ac-emmet-html-setup)
-
 (add-hook 'css-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook 'ac-emmet-css-setup)
-
+(add-hook 'js2-mode-hook 'my-js2-mode-hook)
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
+
 (js2r-add-keybindings-with-prefix "C-c C-m")
 
 (setq web-mode-ac-sources-alist
