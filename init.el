@@ -71,9 +71,6 @@
 ;; Load init files
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-;; ELPA
-(require 'init-elpa)
-
 ;; Install packages
 (require 'init-package)
 
