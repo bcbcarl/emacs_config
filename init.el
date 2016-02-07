@@ -20,28 +20,22 @@
   kept-old-versions 2
   version-control t)
 
+;; Save Place in Opened Files
+(setq-default save-place t)
+(defvar save-place-file (concat user-emacs-directory ".saved-places"))
+(require 'saveplace)
+
 ;; Remove newline insertion at end of file
 (setq mode-require-final-newline nil)
 
 ;; sudo when necessary
 (defadvice ido-find-file (after find-file-sudo activate)
   "Find file as root if necessary."
-  (unless (and buffer-file-name
-	       (file-writable-p buffer-file-name))
-        (find-alternate-file (concat "/sudo:root@localhost:"
-				     buffer-file-name))))
-
-;; Flycheck
-(defvar flycheck-emacs-lisp-load-path 'inherit)
-
-;; Load init files
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+  (unless (and buffer-file-name (file-writable-p buffer-file-name))
+    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
 ;; No startup screen
 (setq inhibit-startup-screen t)
-
-;; ELPA
-(require 'init-elpa)
 
 ;; Remove menubar, toolbar and scrollbar
 (when (fboundp 'menu-bar-mode)
@@ -49,40 +43,10 @@
 (dolist (mode '(tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
-;; Mac only
-(require 'init-osx)
-
-;; material-theme
-(load-theme 'material t)
-
 ;; Auto-fill Mode
 (setq-default fill-column 79)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'prog-mode-hook 'turn-on-auto-fill)
-
-;; Save Place in Opened Files
-(setq-default save-place t)
-(defvar save-place-file (concat user-emacs-directory ".saved-places"))
-(require 'saveplace)
-
-(dolist (mode '(column-number-mode line-number-mode))
-  (when (fboundp mode) (funcall mode t)))
-
-(dolist (mode-hook '(text-mode-hook prog-mode-hook conf-mode-hook))
-        (add-hook mode-hook
-          (lambda ()
-            (linum-mode 1)
-            (evil-mode 1)
-            (flycheck-mode 1))))
-
-;; neotree
-(global-set-key [f8] 'neotree-toggle)
-(add-hook 'neotree-mode-hook
-	(lambda ()
-	    (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-	    (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-	    (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-	    (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
 ;; show parenthesis match
 (defvar show-paren-delay 0)
@@ -103,6 +67,43 @@
       (set-fontset-font (frame-parameter nil 'font)
 			charset
 			(font-spec :family "PingFang TC" :size 14))))
+
+;; Load init files
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+
+;; ELPA
+(require 'init-elpa)
+
+;; Install packages
+(require 'init-package)
+
+;; Flycheck
+(defvar flycheck-emacs-lisp-load-path 'inherit)
+
+;; Mac only
+(require 'init-osx)
+
+;; material-theme
+(load-theme 'material t)
+
+(dolist (mode '(column-number-mode line-number-mode))
+  (when (fboundp mode) (funcall mode t)))
+
+(dolist (mode-hook '(text-mode-hook prog-mode-hook conf-mode-hook))
+        (add-hook mode-hook
+          (lambda ()
+            (linum-mode 1)
+            (evil-mode 1)
+            (flycheck-mode 1))))
+
+;; neotree
+(global-set-key [f8] 'neotree-toggle)
+(add-hook 'neotree-mode-hook
+	(lambda ()
+	    (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+	    (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+	    (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+	    (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
 ;; Auto-Complete
 (ac-config-default)
@@ -128,6 +129,14 @@
 
 ;; IRC
 (require 'init-irc)
+
+;; Tide
+(add-hook 'typescript-mode-hook
+          (lambda ()
+            (tide-setup)
+            (flycheck-mode +1)
+            (setq flycheck-check-syntax-automatically '(save mode-enabled))
+            (eldoc-mode +1)))
 
 (provide 'init)
 ;;; init.el ends here
