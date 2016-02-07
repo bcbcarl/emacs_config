@@ -1,6 +1,6 @@
 # emacs_config
 
-This config works on Debian Jessie and Mac OS X 10.11.
+This config works on Debian 8 (Jessie) and Mac OS X 10.11.
 
 ## Installation
 
