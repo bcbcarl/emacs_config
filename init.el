@@ -6,9 +6,9 @@
 
 ;; Set PATH
 (setenv "PATH"
-  (concat "/usr/local/bin:" (getenv "PATH"))
-)
-(setq exec-path (append exec-path '("/usr/local/bin")))
+	(concat "/usr/local/bin:" (getenv "PATH")))
+(setq exec-path
+      (append exec-path '("/usr/local/bin")))
 
 ;; Backup settings
 (setq
