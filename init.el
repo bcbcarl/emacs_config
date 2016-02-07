@@ -110,12 +110,17 @@
 ;; Auto-Complete
 (ac-config-default)
 
-;; shell-pop
-(custom-set-variables
-  '(shell-pop-shell-type (quote ("ansi-term" "*ansi-term*" (lambda nil (ansi-term shell-pop-term-shell)))))
-  '(shell-pop-universal-key "C-x C-t")
-  '(shell-pop-full-span t))
 (add-hook 'term-mode-hook (lambda() (setq yas-dont-activate t)))
+;; Bind key to powershell if using Windows
+(cond ((eq system-type 'windows-nt)
+       (global-set-key (kbd "C-x C-t") 'powershell))
+      ;; Bind key to shell-pop, otherwise
+      (t (custom-set-variables
+          '(shell-pop-shell-type
+            (quote ("ansi-term" "*ansi-term*"
+                    (lambda nil (ansi-term shell-pop-term-shell)))))
+          '(shell-pop-universal-key "C-x C-t")
+          '(shell-pop-full-span t))))
 
 ;; Git-Gutter
 (require 'init-git)
