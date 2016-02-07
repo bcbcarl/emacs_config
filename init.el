@@ -56,6 +56,9 @@
 ;; Toggle line highlighting in all buffers
 (global-hl-line-mode t)
 
+;; Delete by moving to trash
+(setq delete-by-moving-to-trash t)
+
 ;; Setting English font
 (if (member "Monaco" (font-family-list))
     (set-face-attribute
