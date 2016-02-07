@@ -77,8 +77,10 @@
 ;; Flycheck
 (defvar flycheck-emacs-lisp-load-path 'inherit)
 
-;; Mac only
-(require 'init-osx)
+;; Mac OS X related configurations
+(defconst *is-a-mac* (eq system-type 'darwin))
+(when *is-a-mac*
+  (require 'init-osx))
 
 ;; material-theme
 (load-theme 'material t)
