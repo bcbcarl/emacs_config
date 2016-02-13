@@ -29,6 +29,7 @@
     markdown-mode
     material-theme
     neotree
+    paredit
     php-auto-yasnippets
     php-mode
     recentf
