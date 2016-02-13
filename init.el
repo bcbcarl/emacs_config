@@ -57,6 +57,9 @@
 ;; Delete by moving to trash
 (setq delete-by-moving-to-trash t)
 
+;; ido-mode
+(ido-mode t)
+
 ;; Setting English font
 (if (member "Monaco" (font-family-list))
     (set-face-attribute
