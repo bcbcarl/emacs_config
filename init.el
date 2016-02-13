@@ -135,6 +135,9 @@
 ;; IRC
 (require 'init-irc)
 
+;; Clojure
+(require 'init-clojure)
+
 ;; Tide
 (add-hook 'typescript-mode-hook
           (lambda ()
