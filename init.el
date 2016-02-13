@@ -68,6 +68,7 @@
 
 ;; ido-mode
 (ido-mode t)
+(setq ido-enable-flex-matching t)
 
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
