@@ -21,8 +21,8 @@
 (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
 (add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
 
-(require 'evil)
-(evil-set-initial-state 'cider-repl-mode 'emacs)
+(with-eval-after-load 'evil
+  (evil-set-initial-state 'cider-repl-mode 'emacs))
 
 (provide 'init-clojure)
 
