@@ -24,6 +24,7 @@
     flycheck
     git-gutter
     golden-ratio
+    highlight-parentheses
     js2-mode
     js2-refactor
     lua-mode

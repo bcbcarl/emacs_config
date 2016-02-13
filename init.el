@@ -91,6 +91,9 @@
 ;; Install packages
 (require 'init-package)
 
+;; highlight-parentheses
+(add-hook 'prog-mode-hook #'highlight-parentheses-mode)
+
 ;; smex
 (setq smex-save-file (expand-file-name ".smex-items" user-emacs-directory))
 (global-set-key [remap execute-extended-command] 'smex)
