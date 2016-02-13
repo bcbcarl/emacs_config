@@ -31,6 +31,7 @@
     neotree
     php-auto-yasnippets
     php-mode
+    recentf
     tide
     web-mode
     yasnippet))

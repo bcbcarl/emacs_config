@@ -75,6 +75,10 @@
 ;; Install packages
 (require 'init-package)
 
+;; Recent files
+(setq recentf-save-file (concat user-emacs-directory ".recentf"))
+(recentf-mode 1)
+
 ;; Flycheck
 (defvar flycheck-emacs-lisp-load-path 'inherit)
 
