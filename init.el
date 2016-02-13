@@ -87,6 +87,10 @@
 ;; Install packages
 (require 'init-package)
 
+;; smex
+(setq smex-save-file (expand-file-name ".smex-items" user-emacs-directory))
+(global-set-key [remap execute-extended-command] 'smex)
+
 ;; Recent files
 (setq recentf-save-file (concat user-emacs-directory ".recentf"))
 (recentf-mode 1)

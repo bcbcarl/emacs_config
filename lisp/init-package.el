@@ -32,6 +32,7 @@
     php-auto-yasnippets
     php-mode
     recentf
+    smex
     tide
     web-mode
     yasnippet))
