@@ -69,6 +69,9 @@
 ;; ido-mode
 (ido-mode t)
 
+;; ibuffer
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
 ;; Setting English font
 (if (member "Monaco" (font-family-list))
     (set-face-attribute
