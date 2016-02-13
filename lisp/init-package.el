@@ -15,17 +15,35 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+(defvar my-packages
+  '(ac-emmet
+    cider
+    clj-refactor
+    editorconfig
+    evil
+    flycheck
+    git-gutter
+    js2-mode
+    js2-refactor
+    lua-mode
+    markdown-mode
+    material-theme
+    neotree
+    php-auto-yasnippets
+    php-mode
+    tide
+    web-mode
+    yasnippet))
+
+(dolist (package my-packages)
+  (unless (package-installed-p package)
+    (package-install package)))
+
 (cond ((eq system-type 'windows-nt)
        (unless (package-installed-p 'powershell)
                (package-install 'powershell)))
       (t (unless (package-installed-p 'shell-pop)
                  (package-install 'shell-pop))))
-
-(dolist (package '(ac-emmet cider editorconfig evil flycheck git-gutter js2-mode
-                   js2-refactor lua-mode markdown-mode material-theme neotree
-                   php-auto-yasnippets php-mode tide web-mode yasnippet))
-  (unless (package-installed-p package)
-    (package-install package)))
 
 (provide 'init-package)
 ;;; init-package.el ends here
