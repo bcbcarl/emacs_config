@@ -23,6 +23,7 @@
     evil
     flycheck
     git-gutter
+    golden-ratio
     js2-mode
     js2-refactor
     lua-mode

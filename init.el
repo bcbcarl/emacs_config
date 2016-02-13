@@ -119,6 +119,10 @@
             (evil-mode 1)
             (flycheck-mode 1))))
 
+;; golden-ratio
+(golden-ratio-mode 1)
+(setq golden-ratio-auto-scale t)
+
 ;; neotree
 (global-set-key [f8] 'neotree-toggle)
 (add-hook 'neotree-mode-hook
