@@ -57,6 +57,15 @@
 ;; Delete by moving to trash
 (setq delete-by-moving-to-trash t)
 
+;; No cursor blinking
+(blink-cursor-mode 0)
+
+;; Full path in title bar
+(setq-default frame-title-format "%b (%f)")
+
+;; No ring bell
+(setq ring-bell-function 'ignore)
+
 ;; ido-mode
 (ido-mode t)
 
