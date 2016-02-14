@@ -177,6 +177,9 @@
 ;; Clojure
 (require 'init-clojure)
 
+;; Google Translate
+(require 'init-translate)
+
 ;; Tide
 (add-hook 'typescript-mode-hook
           (lambda ()

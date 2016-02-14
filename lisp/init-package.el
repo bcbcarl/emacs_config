@@ -24,6 +24,7 @@
     flycheck
     git-gutter
     golden-ratio
+    google-translate
     highlight-parentheses
     js2-mode
     js2-refactor
