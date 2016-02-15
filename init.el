@@ -51,14 +51,6 @@
 (defvar show-paren-style 'expression)
 (show-paren-mode 1)
 
-;; Paredit
-(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
-(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
-(add-hook 'ielm-mode-hook             #'enable-paredit-mode)
-(add-hook 'lisp-mode-hook             #'enable-paredit-mode)
-(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
-(add-hook 'scheme-mode-hook           #'enable-paredit-mode)
-
 ;; Toggle line highlighting in all buffers
 (global-hl-line-mode t)
 
@@ -98,6 +90,14 @@
 
 ;; Install packages
 (require 'init-package)
+
+;; Paredit
+(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+(add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+(add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 
 ;; highlight-parentheses
 (add-hook 'prog-mode-hook #'highlight-parentheses-mode)
