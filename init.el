@@ -92,10 +92,9 @@
 (require 'init-package)
 
 ;; Paredit
-(add-hook 'emacs-lisp-mode-hook
-	  (lambda ()
-	    (enable-paredit-mode)
-	    (define-key paredit-mode-map (kbd "C-j") 'eval-print-last-sexp)))
+(eval-after-load "paredit"
+  #'(define-key paredit-mode-map (kbd "C-j") 'eval-last-sexp))
+(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
 (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
 (add-hook 'ielm-mode-hook             #'enable-paredit-mode)
 (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
