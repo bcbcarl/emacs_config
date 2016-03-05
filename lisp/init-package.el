@@ -17,6 +17,7 @@
     clj-refactor
     editorconfig
     evil
+    fish-mode
     flycheck
     git-gutter
     golden-ratio
