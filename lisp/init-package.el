@@ -16,6 +16,7 @@
     cider
     clj-refactor
     editorconfig
+    esup
     evil
     fish-mode
     flycheck
