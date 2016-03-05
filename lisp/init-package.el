@@ -11,9 +11,6 @@
 
 (package-initialize)
 
-(when (not package-archive-contents)
-  (package-refresh-contents))
-
 (defvar my-packages
   '(ac-emmet
     cider
@@ -39,6 +36,9 @@
     tide
     web-mode
     yasnippet))
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)
