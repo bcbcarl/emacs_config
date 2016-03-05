@@ -8,6 +8,7 @@
 ac-comphist.dat
 ido.last
 *.swp
+*.elc
 /tramp
 \#*\#
 .\#*
