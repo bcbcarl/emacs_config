@@ -183,6 +183,14 @@
 ;; Google Translate
 (require 'init-translate)
 
+;; git-timemachine
+;; @see http://blog.binchen.org/posts/use-git-timemachine-with-evil.html
+(eval-after-load 'git-timemachine
+  '(progn
+     (evil-make-overriding-map git-timemachine-mode-map 'normal)
+     ;; force update evil keymaps after git-timemachine-mode loaded
+     (add-hook 'git-timemachine-mode-hook #'evil-normalize-keymaps)))
+
 ;; Tide
 (add-hook 'typescript-mode-hook
           (lambda ()

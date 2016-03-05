@@ -21,6 +21,7 @@
     fish-mode
     flycheck
     git-gutter
+    git-timemachine
     golden-ratio
     google-translate
     highlight-parentheses
