@@ -1,4 +1,4 @@
-(require 'php-mode)
+(autoload 'php-mode "php-mode" "Major mode for editing php code." t)
 (eval-after-load 'php-mode
   '(require 'php-ext))
 
