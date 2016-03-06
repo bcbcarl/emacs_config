@@ -20,6 +20,7 @@
     evil
     fish-mode
     flycheck
+    flycheck-package
     git-gutter
     git-timemachine
     golden-ratio

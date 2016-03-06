@@ -115,6 +115,10 @@
 ;; Flycheck
 (defvar flycheck-emacs-lisp-load-path 'inherit)
 
+;; flycheck-package
+(eval-after-load 'flycheck
+  '(flycheck-package-setup))
+
 ;; Mac OS X related configurations
 (defconst *is-a-mac* (eq system-type 'darwin))
 (when *is-a-mac*
