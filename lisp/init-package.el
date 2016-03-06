@@ -39,6 +39,7 @@
     smex
     tide
     web-mode
+    wttrin
     yasnippet))
 
 (when (not package-archive-contents)

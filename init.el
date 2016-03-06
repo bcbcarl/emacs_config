@@ -204,5 +204,9 @@
             (setq flycheck-check-syntax-automatically '(save mode-enabled))
             (eldoc-mode +1)))
 
+;; wttrin
+(defvar wttrin-default-cities '("Taipei"))
+(require 'wttrin)
+
 (provide 'init)
 ;;; init.el ends here
