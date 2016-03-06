@@ -138,9 +138,10 @@
             (flycheck-mode 1))))
 
 ;; golden-ratio
-;; FIXME: conflict with neotree
-;;(golden-ratio-mode 1)
-;;(setq golden-ratio-auto-scale t)
+(golden-ratio-mode 1)
+(setq golden-ratio-auto-scale t)
+(with-eval-after-load 'golden-ratio
+  (add-to-list 'golden-ratio-exclude-buffer-names " *NeoTree*"))
 
 ;; neotree
 (global-set-key [f8] 'neotree-toggle)
