@@ -73,20 +73,11 @@
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-;; Setting English font
-(if (member "Monaco" (font-family-list))
-    (set-face-attribute
-      'default nil :font "Monaco 14"))
-
-;; Setting CJK font
-(if (member "PingFang TC" (font-family-list))
-    (dolist (charset '(kana han symbol cjk-misc bopomofo))
-      (set-fontset-font (frame-parameter nil 'font)
-			charset
-			(font-spec :family "PingFang TC" :size 14))))
-
 ;; Load init files
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+
+;; Set English and CJK fonts
+(require 'init-fonts)
 
 ;; Install packages
 (require 'init-package)
