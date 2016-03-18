@@ -121,12 +121,19 @@
 (dolist (mode '(column-number-mode line-number-mode))
   (when (fboundp mode) (funcall mode t)))
 
+;; linum, evil, flycheck
 (dolist (mode-hook '(text-mode-hook prog-mode-hook conf-mode-hook))
         (add-hook mode-hook
           (lambda ()
             (linum-mode 1)
             (evil-mode 1)
             (flycheck-mode 1))))
+
+;; ggtags
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
 
 ;; golden-ratio
 (golden-ratio-mode 1)
