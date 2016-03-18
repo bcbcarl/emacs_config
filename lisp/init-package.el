@@ -22,6 +22,7 @@
     fish-mode
     flycheck
     flycheck-package
+    ggtags
     git-gutter
     git-timemachine
     golden-ratio
