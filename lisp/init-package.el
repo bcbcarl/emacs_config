@@ -15,6 +15,7 @@
   '(ac-emmet
     cider
     clj-refactor
+    dockerfile-mode
     editorconfig
     esup
     evil
