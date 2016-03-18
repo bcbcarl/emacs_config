@@ -40,6 +40,7 @@
     tide
     web-mode
     wttrin
+    yaml-mode
     yasnippet))
 
 (when (not package-archive-contents)
