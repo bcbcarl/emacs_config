@@ -12,7 +12,7 @@
 (defvar emacs-cjk-font "PingFang TC"
   "The font name for CJK.")
 
-(defvar emacs-font-size-pair '(15 . 18)
+(defvar emacs-font-size-pair '(13 . 16)
   "Default font size pair for (english . chinese).")
 
 (defvar emacs-font-size-pair-list
