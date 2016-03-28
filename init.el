@@ -139,6 +139,7 @@
 (golden-ratio-mode 1)
 (setq golden-ratio-auto-scale t)
 (with-eval-after-load 'golden-ratio
+  (setq golden-ratio-exclude-modes '("ranger-mode"))
   (add-to-list 'golden-ratio-exclude-buffer-names " *NeoTree*"))
 
 ;; neotree

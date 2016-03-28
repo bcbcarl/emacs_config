@@ -37,6 +37,7 @@
     paredit
     php-auto-yasnippets
     php-mode
+    ranger
     recentf
     restclient
     smex
