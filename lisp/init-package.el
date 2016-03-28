@@ -38,6 +38,7 @@
     php-auto-yasnippets
     php-mode
     recentf
+    restclient
     smex
     tide
     web-mode
