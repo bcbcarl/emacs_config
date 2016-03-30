@@ -127,7 +127,8 @@
           (lambda ()
             (linum-mode 1)
             (evil-mode 1)
-            (flycheck-mode 1))))
+            (flycheck-mode 1)))
+        (add-hook mode-hook 'projectile-mode))
 
 ;; ggtags
 (add-hook 'c-mode-common-hook

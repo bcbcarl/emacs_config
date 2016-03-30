@@ -13,6 +13,7 @@
 
 (defvar my-packages
   '(ac-emmet
+    ag
     cider
     clj-refactor
     dockerfile-mode
@@ -37,6 +38,7 @@
     paredit
     php-auto-yasnippets
     php-mode
+    projectile
     ranger
     recentf
     restclient
